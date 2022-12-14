@@ -1,0 +1,11 @@
+<div class="student_info">
+  <div>
+    <h2 ><%= current_user.first_name+' '+ current_user.last_name %></h2>
+    <h5><%= current_user.type %></h5>
+    <h5><%= current_user.phone_number %></h5>
+  </div>
+  <div class=" user_buttons">
+    <%= link_to('Edit Profile',edit_user_registration_path, class:"btn btn-light ")%>
+    <%= link_to('Sign Out',destroy_user_session_path, :method => :delete, class:"btn btn-outline-info ")%>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.course_card{
+    width: 40rem;
+}
+.course_info{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card_title{
+    display: flex;
+    justify-content: center;
+}
+.student-data{
+    display: inline;
+}
+.student-info{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.update-card{
+    width: 50rem;
+    height: 20rem;
+}
+.course-info{
+    display: flex;
+    justify-content: space-evenly;
+}

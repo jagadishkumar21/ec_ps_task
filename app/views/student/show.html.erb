@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "student_profile" %>
+
+<%= render "layouts/user_session" %>
+
+<div class=" registered_courses">
+
+  <nav class="navbar navbar-expand-lg  nav-text ">
+    <h5> Current Enrolled Courses</h5>
+    <%= link_to "Enroll New Course", allCourses_path, class: "btn btn-secondary " %>
+  </nav>
+  <%= render "student/student_enrolled_courses" %>
+</div>
+

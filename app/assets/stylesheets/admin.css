@@ -1,0 +1,34 @@
+.admin-control-card{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-card{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.card-title{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.admin-student-data{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-gap: 8px;
+}
+.admin-student-info{
+    font-size: 1.3rem;
+}
+.admin-student-card{
+    width: 25rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+}

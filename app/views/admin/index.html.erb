@@ -1,0 +1,33 @@
+<%= render "layouts/user_session" %>
+
+<div class="admin-control-card">
+  <div class="card admin-card">
+    <div class="card-body">
+      <h5 class="card-title">Admin Controls</h5>
+        <table class="table table-striped">
+          <tr>
+            <th> Category </th>
+            <th> View </th>
+            <th> New </th>
+          </tr>
+          <tr>
+            <td> Students </td>
+            <td><%= link_to "view",admin_students_list_path %></td>
+            <td><%= link_to "Add New", create_new_user_path %></td>
+          </tr>
+          <tr>
+            <td> Teachers </td>
+            <td><%= link_to "view",admin_teacher_list_path %></td>
+            <td><%= link_to "Add New", create_new_user_path %></td>
+          </tr>
+          <tr>
+            <td> Courses </td>
+            <td><%= link_to "view",courses.courses_path%></td>
+            <td><%= link_to "Add New", courses.new_course_path %></td>
+          </tr>
+
+        </table>
+
+    </div>
+  </div>
+</div>

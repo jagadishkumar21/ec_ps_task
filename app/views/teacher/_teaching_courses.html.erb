@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <tr>
+    <th>Course Id</th>
+    <th>Course Name</th>
+    <th> Students Count</th>
+    <th> View </th>
+  </tr>
+  <tr>
+    <% @teaching_courses.each do |course| %>
+      <td><%= course.id %></td>
+      <td><%= course.course_name %></td>
+      <td><%= course.enrolled_courses.count %></td>
+      <td><%= link_to "view",enrolled_students_path(course.id)%></td>
+      </tr>
+    <% end %>
+    </table>

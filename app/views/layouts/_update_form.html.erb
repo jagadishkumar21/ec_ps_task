@@ -1,0 +1,6 @@
+<%= form_with model: @enrolled_course, url: update_marks_path(@enrolled_course), method: :patch do |form| %>
+  <h5><%= form.label :Marks %></h5>
+  <%= form.text_field :marks %>
+  <%=  form.hidden_field :id, value: @enrolled_course.id %>
+  <%= form.submit "Update", class: "btn btn-success" %>
+<% end %>

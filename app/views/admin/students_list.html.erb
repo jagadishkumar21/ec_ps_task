@@ -1,0 +1,28 @@
+<%= render "layouts/user_session" %>
+
+
+<div class=" registered_courses">
+  <nav class="navbar navbar-expand-lg  nav-text ">
+    <h5> All Students</h5>
+  </nav>
+  <table class="table table-striped">
+    <tr>
+      <th>Student Id</th>
+      <th>Student Name</th>
+      <th>Student Email</th>
+      <th>Student Phone Number</th>
+      <th> Show </th>
+    </tr>
+    <% @all_students.each do |student| %>
+      <tr>
+        <td><%= student.id%></td>
+        <td><%= student.first_name+ " "+ student.last_name%></td>
+        <td><%= student.email%></td>
+        <td><%= student.phone_number%></td>
+        <td><%= link_to "open",student_info_path(student)%><br /></td>
+
+      </tr>
+    <% end %>
+
+  </table>
+</div>

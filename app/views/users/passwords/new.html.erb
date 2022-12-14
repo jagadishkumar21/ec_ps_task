@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "authentication.css" %>
+
+<div class="page">
+  <div class="card card-styles"  >
+    <div class="card-body card-styles1">
+      <h2 class="card-title">Forgot your password?</h2>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= render "users/shared/error_messages", resource: resource %>
+
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+          <br>
+          <div class="actions">
+            <%= f.submit "Send me reset password instructions" %>
+          </div>
+        <% end %>
+        <br>
+        <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>

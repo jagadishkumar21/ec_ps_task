@@ -1,0 +1,22 @@
+<div class="page">
+  <div class="card update-card "  >
+    <div class="card-body ">
+
+      <div class="student-info">
+        <p><%="Name: "+ @enrolled_course.student.first_name+" "+ @enrolled_course.student.last_name  %></p>
+        <p><%="Email: "+ @enrolled_course.student.email %></p>
+        <p ><%="Phone Number: "+ @enrolled_course.student.phone_number%></p>
+      </div>
+      <br><br><br>
+      <section class = "course-info">
+        <div>
+          <h5><%= "Course: " %></h5>
+          <h6><%= @enrolled_course.course.course_name %></h6>
+        </div>
+        <div>
+          <%= render "layouts/update_form" %>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

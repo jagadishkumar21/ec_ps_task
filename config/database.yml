@@ -1,0 +1,27 @@
+
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: password
+  socket: /tmp/mysql.sock
+  port: 7006
+  host: 127.0.0.1
+  strict: true
+
+development:
+  <<: *default
+  database: Engineering_college_development
+
+
+test:
+  <<: *default
+  database: Engineering_college_test
+
+
+production:
+  <<: *default
+  database: Engineering_college_production
+  username: Engineering_college
+  password: <%= ENV['ENGINEERING_COLLEGE_DATABASE_PASSWORD'] %>

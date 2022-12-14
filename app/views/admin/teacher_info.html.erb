@@ -1,0 +1,21 @@
+<%= render "layouts/user_session" %>
+
+<div class="admin-student-data">
+  <div class="card admin-student-card "  >
+    <div class="card-body ">
+      <div class="admin-student-info">
+        <p><%="Name: "+ @teacher.first_name+" "+ @teacher.last_name  %></p>
+        <p><%="Email: "+ @teacher.email %></p>
+        <p ><%="Phone Number: "+ @teacher.phone_number%></p>
+        <p ><%="Role: "+ @teacher.type%></p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <nav class="navbar navbar-expand-lg  nav-text ">
+      <h5> Teaching Courses</h5>
+    </nav>
+    <%= render "teacher/teaching_courses" %>
+  </div>
+
+</div>

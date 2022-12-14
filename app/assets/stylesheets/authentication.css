@@ -1,0 +1,22 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.page{
+
+    height: 100vh;
+    background-color: #4F8493 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-styles{
+    width: 32rem;
+    padding: 3rem;
+    border-radius: 1.414rem;
+}
+.card-styles1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

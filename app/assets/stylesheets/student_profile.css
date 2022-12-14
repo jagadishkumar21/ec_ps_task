@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.student_info{
+    background-color: #3A8891;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+}
+
+.user_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.courses_info{
+    height: 80vh;
+}
+
+.nav-text{
+    background-color: #D6F3FB;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.table-data{
+    padding: 100px;
+}

@@ -1,0 +1,30 @@
+<%= render "layouts/user_session" %>
+
+<div class="available_courses">
+  <nav class="navbar navbar-expand-lg  nav-text"><h5>All Available Courses</h5></nav>
+  <table class="table table-striped">
+    <tr>
+      <th>Course Id</th>
+      <th>Course Name</th>
+      <th>Teacher Id</th>
+      <th>Teacher Name </th>
+      <th>Course Status</th>
+
+    </tr>
+    <% @available_courses.each do |course| %>
+      <tr>
+        <td><%= course.id %></td>
+        <td><%= course.course_name %></td>
+        <td><%= course.teacher_id%></td>
+        <td><%= course.teacher.first_name + " " + course.teacher.last_name%></td>
+
+        <% unless (current_user.enrolled_courses.find_by(courses_courses_id: course.id))  %>
+          <td><%= link_to "Register", register_path(course.id), method: :post %><br /></td>
+        <% else %>
+          <td><%= link_to "Unregister", destroy_path(course.id), method: :delete %><br /></td>
+      <% end %>
+      </tr>
+    <% end %>
+
+  </table>
+</div>

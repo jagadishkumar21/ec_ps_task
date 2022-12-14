@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <tr>
+    <th>Course Id</th>
+    <th>Course Name</th>
+    <th>Teacher Id</th>
+    <th>Teacher Name</th>
+    <th>Course Marks</th>
+    <th> Edit </th>
+  </tr>
+  <% @enrolled_courses.each do |course| %>
+    <tr>
+      <td><%= course.courses_courses_id%></td>
+      <td><%= course.course.course_name%></td>
+      <td><%= course.course.teacher_id%></td>
+      <td><%= course.course.teacher.first_name+" " + course.course.teacher.last_name %></td>
+      <td><%= course.marks%></td>
+      <td><%= link_to "Unregister", destroy_path(course.courses_courses_id), method: :delete %><br /></td>
+
+    </tr>
+  <% end %>
+
+</table>
